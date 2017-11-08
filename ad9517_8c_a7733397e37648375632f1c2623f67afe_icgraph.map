@@ -1,0 +1,10 @@
+<map id="ad9517_write" name="ad9517_write">
+<area shape="rect" id="node1" title="Writes data into a register." alt="" coords="501,114,600,141"/>
+<area shape="rect" id="node2" href="$ad9517_8h.html#a1a8ea84bf7f5359de3ffadf2dce5bc03" title="Sets the frequency on the specified channel." alt="" coords="113,17,241,43"/>
+<area shape="rect" id="node4" href="$ad9517_8h.html#adc5b854ba12c661a229b379a91195f51" title="Sets the phase on the specified channel." alt="" coords="322,38,429,65"/>
+<area shape="rect" id="node5" href="$ad9517_8h.html#af14d846dbf6b3655d02980c3e8e31f45" title="Sets the power mode of the specified channel." alt="" coords="104,95,249,122"/>
+<area shape="rect" id="node6" href="$ad9517_8h.html#a238147bdb3fc2a80bbcf749657f5db3b" title="Initializes the AD9517." alt="" coords="125,153,228,179"/>
+<area shape="rect" id="node7" href="$ad9517_8h.html#a8947daebb804093893721c29e3f83d11" title="Transfers the contents of the buffer registers into the active registers." alt="" coords="320,241,431,267"/>
+<area shape="rect" id="node8" href="$ad9517_8h.html#afb845e0029fe1cdfdf27e311d3cc82db" title="Sets the VCO frequency." alt="" coords="297,190,453,217"/>
+<area shape="rect" id="node3" href="$ad9467__fmc_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Main function." alt="" coords="5,127,56,154"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="projects/ad7124&#45;4sdz/src/ad7124&#45;4sdz.c" name="projects/ad7124&#45;4sdz/src/ad7124&#45;4sdz.c">
+<area shape="rect" id="node1" title="ad7124 application example." alt="" coords="180,5,327,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,67,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="91,95,170,121"/>
+<area shape="rect" id="node4" href="$ad7124_8h.html" title="AD7124 header file. Devices AD7124&#45;4, AD7124&#45;8." alt="" coords="216,169,291,196"/>
+<area shape="rect" id="node8" href="$ad7124__regs_8h.html" title="AD7124 register file. Devices: AD7124&#45;4, AD7124&#45;8." alt="" coords="245,95,352,121"/>
+<area shape="rect" id="node9" title=" " alt="" coords="377,95,463,121"/>
+<area shape="rect" id="node10" href="$error_8h.html" title="Error codes definition." alt="" coords="488,95,547,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="221,319,286,345"/>
+<area shape="rect" id="node6" href="$spi_8h.html" title="Header file of SPI Interface." alt="" coords="228,244,279,271"/>
+<area shape="rect" id="node7" href="$delay_8h.html" title="Header file of Delay functions." alt="" coords="303,244,367,271"/>
+<area shape="rect" id="node11" title=" " alt="" coords="486,169,549,196"/>
+</map>

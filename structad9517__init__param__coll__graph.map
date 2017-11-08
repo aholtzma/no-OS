@@ -1,0 +1,9 @@
+<map id="ad9517_init_param" name="ad9517_init_param">
+<area shape="rect" id="node1" title=" " alt="" coords="621,107,752,133"/>
+<area shape="rect" id="node2" href="$structad9517__state.html" title=" " alt="" coords="405,81,505,108"/>
+<area shape="rect" id="node3" href="$structad9517__platform__data.html" title=" " alt="" coords="41,5,191,32"/>
+<area shape="rect" id="node4" href="$structad9517__lvds__cmos__channel__spec.html" title=" " alt="" coords="5,56,227,83"/>
+<area shape="rect" id="node5" href="$structad9517__lvpecl__channel__spec.html" title=" " alt="" coords="20,107,212,133"/>
+<area shape="rect" id="node6" href="$structspi__init__param.html" title="Structure holding the parameters for SPI initialization." alt="" coords="401,132,508,159"/>
+<area shape="rect" id="node7" href="$structspi__platform__ops.html" title="Structure holding SPI function pointers that point to the platform specific function." alt="" coords="55,157,177,184"/>
+</map>

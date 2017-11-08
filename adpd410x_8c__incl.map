@@ -1,0 +1,14 @@
+<map id="drivers/photo&#45;electronic/adpd410x/adpd410x.c" name="drivers/photo&#45;electronic/adpd410x/adpd410x.c">
+<area shape="rect" id="node1" title=" " alt="" coords="141,5,299,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,69,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="401,244,466,271"/>
+<area shape="rect" id="node4" title=" " alt="" coords="145,95,210,121"/>
+<area shape="rect" id="node5" href="$error_8h.html" title="Error codes definition." alt="" coords="235,95,293,121"/>
+<area shape="rect" id="node7" href="$util_8h.html" title="Implementation of utility functions." alt="" coords="317,95,368,121"/>
+<area shape="rect" id="node9" href="$adpd410x_8h.html" title=" " alt="" coords="393,95,482,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="171,169,234,196"/>
+<area shape="rect" id="node8" title=" " alt="" coords="309,169,384,196"/>
+<area shape="rect" id="node10" href="$spi_8h.html" title="Header file of SPI Interface." alt="" coords="408,169,459,196"/>
+<area shape="rect" id="node11" href="$i2c_8h.html" title="Header file of I2C Interface." alt="" coords="483,169,533,196"/>
+<area shape="rect" id="node12" href="$gpio_8h.html" title="Header file of GPIO Interface." alt="" coords="558,169,615,196"/>
+</map>

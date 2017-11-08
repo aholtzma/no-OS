@@ -1,0 +1,5 @@
+<map id="include/trng.h" name="include/trng.h">
+<area shape="rect" id="node1" title="Header file of true random number generator." alt="" coords="144,5,244,32"/>
+<area shape="rect" id="node2" href="$aducm3029_2trng_8c.html" title="Implementation of true random number generator." alt="" coords="5,80,188,121"/>
+<area shape="rect" id="node3" href="$generic_2trng_8c.html" title="Generic implementation of true random number generator." alt="" coords="212,80,371,121"/>
+</map>

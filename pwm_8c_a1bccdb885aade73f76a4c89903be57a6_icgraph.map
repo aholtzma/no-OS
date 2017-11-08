@@ -1,0 +1,5 @@
+<map id="pwm_disable" name="pwm_disable">
+<area shape="rect" id="node1" title="Disable PWM generator device." alt="" coords="255,31,353,57"/>
+<area shape="rect" id="node2" href="$ad469x_8h.html#abda6b9d65e0b6e2a82390a09a8f08eb8" title="Exit conversion mode. Enter register mode to read/write registers." alt="" coords="5,5,207,32"/>
+<area shape="rect" id="node3" href="$iio__aducm3029_8h.html#a07bc388672d88c62eed87eccfdfb99bb" title=" " alt="" coords="55,56,157,83"/>
+</map>

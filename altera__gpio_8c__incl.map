@@ -1,0 +1,11 @@
+<map id="drivers/platform/altera/altera_gpio.c" name="drivers/platform/altera/altera_gpio.c">
+<area shape="rect" id="node1" title="Implementation of Altera GPIO Generic Driver." alt="" coords="266,5,414,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,69,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="94,95,261,121"/>
+<area shape="rect" id="node4" href="$gpio_8h.html" title="Header file of GPIO Interface." alt="" coords="313,169,370,196"/>
+<area shape="rect" id="node6" href="$altera_2gpio__extra_8h.html" title=" " alt="" coords="336,95,429,121"/>
+<area shape="rect" id="node7" href="$error_8h.html" title="Error codes definition." alt="" coords="453,95,512,121"/>
+<area shape="rect" id="node9" title=" " alt="" coords="536,95,635,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="309,244,374,271"/>
+<area shape="rect" id="node8" title=" " alt="" coords="451,169,514,196"/>
+</map>

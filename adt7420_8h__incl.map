@@ -1,0 +1,5 @@
+<map id="drivers/temperature/adt7420/adt7420.h" name="drivers/temperature/adt7420/adt7420.h">
+<area shape="rect" id="node1" title="Header file of ADT7420 Driver." alt="" coords="5,5,140,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="40,169,105,196"/>
+<area shape="rect" id="node3" href="$i2c_8h.html" title="Header file of I2C Interface." alt="" coords="79,95,130,121"/>
+</map>

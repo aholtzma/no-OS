@@ -1,0 +1,8 @@
+<map id="ad5592r_dev" name="ad5592r_dev">
+<area shape="rect" id="node1" title=" " alt="" coords="136,184,232,211"/>
+<area shape="rect" id="node2" href="$structad5592r__rw__ops.html" title=" " alt="" coords="5,95,123,121"/>
+<area shape="rect" id="node3" href="$structi2c__desc.html" title="Structure holding I2C descriptor." alt="" coords="147,95,221,121"/>
+<area shape="rect" id="node4" href="$structi2c__platform__ops.html" title="Structure holding I2C function pointers that point to the platform specific function." alt="" coords="111,5,233,32"/>
+<area shape="rect" id="node5" href="$structspi__desc.html" title="Structure holding SPI descriptor." alt="" coords="268,95,343,121"/>
+<area shape="rect" id="node6" href="$structspi__platform__ops.html" title="Structure holding SPI function pointers that point to the platform specific function." alt="" coords="257,5,378,32"/>
+</map>

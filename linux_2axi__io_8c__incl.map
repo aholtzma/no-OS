@@ -1,0 +1,13 @@
+<map id="drivers/platform/linux/axi_io.c" name="drivers/platform/linux/axi_io.c">
+<area shape="rect" id="node1" title="Implementation of AXI IO through UIO/devmem." alt="" coords="283,5,426,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,64,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="89,95,167,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="192,95,253,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="277,95,341,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="366,95,434,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="458,95,553,121"/>
+<area shape="rect" id="node8" href="$error_8h.html" title="Error codes definition." alt="" coords="577,95,636,121"/>
+<area shape="rect" id="node10" href="$axi__io_8h.html" title="Header file of AXI IO." alt="" coords="660,95,727,121"/>
+<area shape="rect" id="node9" title=" " alt="" coords="574,169,637,196"/>
+<area shape="rect" id="node11" title=" " alt="" coords="661,169,726,196"/>
+</map>

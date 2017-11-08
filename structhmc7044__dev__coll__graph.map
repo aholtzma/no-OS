@@ -1,0 +1,6 @@
+<map id="hmc7044_dev" name="hmc7044_dev">
+<area shape="rect" id="node1" title=" " alt="" coords="71,184,173,211"/>
+<area shape="rect" id="node2" href="$structhmc7044__chan__spec.html" title=" " alt="" coords="5,95,151,121"/>
+<area shape="rect" id="node3" href="$structspi__desc.html" title="Structure holding SPI descriptor." alt="" coords="175,95,250,121"/>
+<area shape="rect" id="node4" href="$structspi__platform__ops.html" title="Structure holding SPI function pointers that point to the platform specific function." alt="" coords="152,5,273,32"/>
+</map>

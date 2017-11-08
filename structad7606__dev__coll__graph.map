@@ -1,0 +1,11 @@
+<map id="ad7606_dev" name="ad7606_dev">
+<area shape="rect" id="node1" title="Device driver structure." alt="" coords="399,301,491,328"/>
+<area shape="rect" id="node2" href="$structad7606__range.html" title="Operation range as specified in datasheet (in uV)" alt="" coords="5,95,108,121"/>
+<area shape="rect" id="node3" href="$structad7606__oversampling.html" title=" " alt="" coords="132,95,280,121"/>
+<area shape="rect" id="node4" href="$structad7606__digital__diag.html" title="Oversampling settings." alt="" coords="305,95,441,121"/>
+<area shape="rect" id="node5" href="$structad7606__config.html" title="AD7606_REG_CONFIG configuration parameters." alt="" coords="465,95,571,121"/>
+<area shape="rect" id="node6" href="$structgpio__desc.html" title="Structure holding the GPIO descriptor." alt="" coords="596,95,677,121"/>
+<area shape="rect" id="node7" href="$structgpio__platform__ops.html" title="Structure holding gpio function pointers that point to the platform specific function." alt="" coords="561,5,689,32"/>
+<area shape="rect" id="node8" href="$structspi__desc.html" title="Structure holding SPI descriptor." alt="" coords="725,95,799,121"/>
+<area shape="rect" id="node9" href="$structspi__platform__ops.html" title="Structure holding SPI function pointers that point to the platform specific function." alt="" coords="713,5,835,32"/>
+</map>

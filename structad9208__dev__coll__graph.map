@@ -1,0 +1,11 @@
+<map id="ad9208_dev" name="ad9208_dev">
+<area shape="rect" id="node1" title=" " alt="" coords="409,184,501,211"/>
+<area shape="rect" id="node2" href="$structad9208__state.html" title=" " alt="" coords="200,95,300,121"/>
+<area shape="rect" id="node3" href="$structad9208__ddc.html" title=" " alt="" coords="5,5,97,32"/>
+<area shape="rect" id="node4" href="$structad9208__handle__t.html" title=" " alt="" coords="122,5,242,32"/>
+<area shape="rect" id="node5" href="$structjesd__param__t.html" title=" " alt="" coords="267,5,367,32"/>
+<area shape="rect" id="node6" href="$structgpio__desc.html" title="Structure holding the GPIO descriptor." alt="" coords="415,95,496,121"/>
+<area shape="rect" id="node7" href="$structgpio__platform__ops.html" title="Structure holding gpio function pointers that point to the platform specific function." alt="" coords="391,5,519,32"/>
+<area shape="rect" id="node8" href="$structspi__desc.html" title="Structure holding SPI descriptor." alt="" coords="562,95,637,121"/>
+<area shape="rect" id="node9" href="$structspi__platform__ops.html" title="Structure holding SPI function pointers that point to the platform specific function." alt="" coords="544,5,665,32"/>
+</map>

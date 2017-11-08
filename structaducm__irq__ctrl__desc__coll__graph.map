@@ -1,0 +1,10 @@
+<map id="aducm_irq_ctrl_desc" name="aducm_irq_ctrl_desc">
+<area shape="rect" id="node1" title="Stores specific platform parameters." alt="" coords="87,363,229,389"/>
+<area shape="rect" id="node2" href="$unionirq__config.html" title="Configuration for the callback." alt="" coords="119,273,197,300"/>
+<area shape="rect" id="node3" href="$structuart__desc.html" title="Stucture holding the UART descriptor." alt="" coords="5,184,84,211"/>
+<area shape="rect" id="node4" href="$structrtc__irq__config.html" title="RTC interrupt configuration routine." alt="" coords="108,184,208,211"/>
+<area shape="rect" id="node5" href="$structrtc__desc.html" title="Structure holding RTC descriptor." alt="" coords="122,95,194,121"/>
+<area shape="rect" id="node6" href="$structgpio__irq__config.html" title="GPIO group interrupt configuration routine." alt="" coords="233,184,342,211"/>
+<area shape="rect" id="node7" href="$structgpio__desc.html" title="Structure holding the GPIO descriptor." alt="" coords="247,95,328,121"/>
+<area shape="rect" id="node8" href="$structgpio__platform__ops.html" title="Structure holding gpio function pointers that point to the platform specific function." alt="" coords="223,5,351,32"/>
+</map>

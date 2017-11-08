@@ -1,0 +1,11 @@
+<map id="drivers/adc/ad7799/ad7799.c" name="drivers/adc/ad7799/ad7799.c">
+<area shape="rect" id="node1" title="Implementation of AD7798/AD7799 Driver." alt="" coords="146,5,278,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,69,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="93,95,155,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="179,95,245,121"/>
+<area shape="rect" id="node5" href="$error_8h.html" title="Error codes definition." alt="" coords="269,95,328,121"/>
+<area shape="rect" id="node7" href="$ad7799_8h.html" title="Header file of AD7798/AD7799 Driver." alt="" coords="352,95,427,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="267,169,330,196"/>
+<area shape="rect" id="node8" title=" " alt="" coords="377,244,442,271"/>
+<area shape="rect" id="node9" href="$spi_8h.html" title="Header file of SPI Interface." alt="" coords="416,169,467,196"/>
+</map>

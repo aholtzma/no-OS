@@ -1,0 +1,7 @@
+<map id="ad7091r5_dev" name="ad7091r5_dev">
+<area shape="rect" id="node1" title="Structure representing an ad7091r5 device." alt="" coords="88,184,191,211"/>
+<area shape="rect" id="node2" href="$structi2c__desc.html" title="Structure holding I2C descriptor." alt="" coords="51,95,126,121"/>
+<area shape="rect" id="node3" href="$structi2c__platform__ops.html" title="Structure holding I2C function pointers that point to the platform specific function." alt="" coords="5,5,127,32"/>
+<area shape="rect" id="node4" href="$structgpio__desc.html" title="Structure holding the GPIO descriptor." alt="" coords="163,95,244,121"/>
+<area shape="rect" id="node5" href="$structgpio__platform__ops.html" title="Structure holding gpio function pointers that point to the platform specific function." alt="" coords="151,5,279,32"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="drivers/platform/altera/altera_spi.c" name="drivers/platform/altera/altera_spi.c">
+<area shape="rect" id="node1" title="Implementation of Altera SPI Generic Driver." alt="" coords="311,5,459,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,69,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="94,95,261,121"/>
+<area shape="rect" id="node4" title=" " alt="" coords="285,95,384,121"/>
+<area shape="rect" id="node5" href="$error_8h.html" title="Error codes definition." alt="" coords="408,95,467,121"/>
+<area shape="rect" id="node7" href="$spi_8h.html" title="Header file of SPI Interface." alt="" coords="527,169,577,196"/>
+<area shape="rect" id="node9" href="$altera_2spi__extra_8h.html" title=" " alt="" coords="542,95,629,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="406,169,469,196"/>
+<area shape="rect" id="node8" title=" " alt="" coords="519,244,585,271"/>
+</map>

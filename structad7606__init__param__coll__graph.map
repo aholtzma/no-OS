@@ -1,0 +1,11 @@
+<map id="ad7606_init_param" name="ad7606_init_param">
+<area shape="rect" id="node1" title=" " alt="" coords="572,248,703,275"/>
+<area shape="rect" id="node2" href="$structad7606__range.html" title="Operation range as specified in datasheet (in uV)" alt="" coords="284,12,387,39"/>
+<area shape="rect" id="node3" href="$structad7606__oversampling.html" title=" " alt="" coords="261,63,409,89"/>
+<area shape="rect" id="node4" href="$structgpio__init__param.html" title="Structure holding the parameters for GPIO initialization." alt="" coords="279,220,392,247"/>
+<area shape="rect" id="node5" href="$structgpio__platform__ops.html" title="Structure holding gpio function pointers that point to the platform specific function." alt="" coords="5,220,133,247"/>
+<area shape="rect" id="node6" href="$structad7606__digital__diag.html" title="Oversampling settings." alt="" coords="267,271,403,297"/>
+<area shape="rect" id="node7" href="$structad7606__config.html" title="AD7606_REG_CONFIG configuration parameters." alt="" coords="282,321,389,348"/>
+<area shape="rect" id="node8" href="$structspi__init__param.html" title="Structure holding the parameters for SPI initialization." alt="" coords="282,372,389,399"/>
+<area shape="rect" id="node9" href="$structspi__platform__ops.html" title="Structure holding SPI function pointers that point to the platform specific function." alt="" coords="9,372,130,399"/>
+</map>

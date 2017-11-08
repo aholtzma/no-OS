@@ -1,0 +1,14 @@
+<map id="drivers/platform/linux/linux_uart.c" name="drivers/platform/linux/linux_uart.c">
+<area shape="rect" id="node1" title="Implementation of Linux platform UART Driver." alt="" coords="329,5,472,47"/>
+<area shape="rect" id="node2" href="$error_8h.html" title="Error codes definition." alt="" coords="10,95,69,121"/>
+<area shape="rect" id="node4" href="$uart_8h.html" title="Header file of UART interface." alt="" coords="95,95,149,121"/>
+<area shape="rect" id="node6" href="$linux__uart_8h.html" title=" " alt="" coords="173,95,263,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="287,95,346,121"/>
+<area shape="rect" id="node8" title=" " alt="" coords="370,95,431,121"/>
+<area shape="rect" id="node9" title=" " alt="" coords="455,95,519,121"/>
+<area shape="rect" id="node10" title=" " alt="" coords="544,95,620,121"/>
+<area shape="rect" id="node11" title=" " alt="" coords="644,95,712,121"/>
+<area shape="rect" id="node12" title=" " alt="" coords="737,95,819,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,169,68,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="92,169,157,196"/>
+</map>

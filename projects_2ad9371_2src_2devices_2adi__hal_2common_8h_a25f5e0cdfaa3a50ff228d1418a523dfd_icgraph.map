@@ -1,0 +1,4 @@
+<map id="platform_init" name="platform_init">
+<area shape="rect" id="node1" title="Initialize the power controller and set the core and peripherals clock divider." alt="" coords="104,5,197,32"/>
+<area shape="rect" id="node2" href="$iio__aducm3029_2src_2main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,56,32"/>
+</map>

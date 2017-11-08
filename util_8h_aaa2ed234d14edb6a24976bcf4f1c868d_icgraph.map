@@ -1,0 +1,13 @@
+<map id="hweight8" name="hweight8">
+<area shape="rect" id="node1" title=" " alt="" coords="444,183,519,209"/>
+<area shape="rect" id="node2" href="$ad469x_8h.html#a51eef171f98e1bc8c25d8dbf9b05952b" title="Configure standard sequencer channels." alt="" coords="223,5,396,32"/>
+<area shape="rect" id="node3" href="$ad5592r_8h.html#a84eb5c0ee68ab812bf4c0bf7c380f114" title=" " alt="" coords="228,56,391,83"/>
+<area shape="rect" id="node4" href="$ad5593r_8h.html#ad2ffdbcc3244bea57c95c127078f667c" title=" " alt="" coords="228,107,391,133"/>
+<area shape="rect" id="node5" href="$adc_8h.html#a4af7379d1fc099dae34fbdb5c9d67d13" title="Read adc data. aducm3029_adc_update_active_channels should be called in order to enable channeles." alt="" coords="235,157,384,184"/>
+<area shape="rect" id="node7" href="$iio__ad713x_8c.html#ac3962ef17b0895a08df1f0fc994fa919" title="Read chunk of data from RAM to pbuf. Call &quot;iio_ad713x_transfer_dev_to_mem&quot; first. This function is pr..." alt="" coords="237,208,381,235"/>
+<area shape="rect" id="node9" href="$iio__axi__adc_8c.html#aca23a80aa2cbb5c102d031473a0d9189" title="Update active channels." alt="" coords="236,259,383,285"/>
+<area shape="rect" id="node10" href="$iio__axi__dac_8c.html#a5391d278882dec3aab5b3caccbb8fdc7" title="Update active channels." alt="" coords="232,309,387,336"/>
+<area shape="rect" id="node11" href="$ad9371_2src_2app_2headless_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="main" alt="" coords="284,360,335,387"/>
+<area shape="rect" id="node6" href="$iio__aducm3029_8h.html#ac7d0f4fb4151e669a07e93cffe6e0572" title=" " alt="" coords="5,157,175,184"/>
+<area shape="rect" id="node8" href="$iio__ad713x_8h.html#a259a55182ae9a8bbf607f56a79f97f45" title="Init for reading/writing and parameterization of a ad9361 device." alt="" coords="36,208,144,235"/>
+</map>

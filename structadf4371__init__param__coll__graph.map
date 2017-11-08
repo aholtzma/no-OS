@@ -1,0 +1,6 @@
+<map id="adf4371_init_param" name="adf4371_init_param">
+<area shape="rect" id="node1" title=" " alt="" coords="66,184,201,211"/>
+<area shape="rect" id="node2" href="$structadf4371__chan__spec.html" title=" " alt="" coords="5,95,144,121"/>
+<area shape="rect" id="node3" href="$structspi__init__param.html" title="Structure holding the parameters for SPI initialization." alt="" coords="168,95,275,121"/>
+<area shape="rect" id="node4" href="$structspi__platform__ops.html" title="Structure holding SPI function pointers that point to the platform specific function." alt="" coords="161,5,282,32"/>
+</map>

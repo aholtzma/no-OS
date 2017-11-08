@@ -1,0 +1,8 @@
+<map id="drivers/adc/ad9208/ad9208_api/api_errors.h" name="drivers/adc/ad9208/ad9208_api/api_errors.h">
+<area shape="rect" id="node1" title="API error codes header file." alt="" coords="449,5,613,47"/>
+<area shape="rect" id="node2" href="$ad9208__adc__api_8c.html" title="Contains AD9208 APIs for ADC, DDC, NCO configuration and control." alt="" coords="5,102,207,143"/>
+<area shape="rect" id="node3" href="$ad9208__api_8c.html" title="Contains AD9208 APIs for ADC Chip Level Configuration and Control." alt="" coords="231,102,405,143"/>
+<area shape="rect" id="node4" href="$ad9208__jesd__api_8c.html" title="Contains AD9208 APIs for ADC JESD Configuration and Control." alt="" coords="429,102,633,143"/>
+<area shape="rect" id="node5" href="$ad9208__reg_8c.html" title="Contains AD9208 APIs for ADC Register Configuration and Control." alt="" coords="657,102,832,143"/>
+<area shape="rect" id="node6" href="$ad9208__signal__monitor__api_8c.html" title="Contains AD9208 APIs for Signal Monitoring Features." alt="" coords="857,95,1035,151"/>
+</map>

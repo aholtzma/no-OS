@@ -1,0 +1,16 @@
+<map id="drivers/platform/aducm3029/iio_aducm3029.c" name="drivers/platform/aducm3029/iio_aducm3029.c">
+<area shape="rect" id="node1" title="Implementation of aducm3029 iio device." alt="" coords="304,5,486,47"/>
+<area shape="rect" id="node2" href="$pwm_8h.html" title="Header file of PWM Interface." alt="" coords="26,95,87,121"/>
+<area shape="rect" id="node5" href="$util_8h.html" title="Implementation of utility functions." alt="" coords="111,95,162,121"/>
+<area shape="rect" id="node6" href="$gpio_8h.html" title="Header file of GPIO Interface." alt="" coords="173,169,230,196"/>
+<area shape="rect" id="node7" href="$iio__aducm3029_8h.html" title="iio description of aducm3029 uc" alt="" coords="238,95,358,121"/>
+<area shape="rect" id="node9" href="$adc_8h.html" title="Interface of adc.c." alt="" coords="365,169,420,196"/>
+<area shape="rect" id="node10" href="$error_8h.html" title="Error codes definition." alt="" coords="432,95,491,121"/>
+<area shape="rect" id="node12" title=" " alt="" coords="515,95,576,121"/>
+<area shape="rect" id="node13" title=" " alt="" coords="601,95,680,121"/>
+<area shape="rect" id="node14" title=" " alt="" coords="704,95,809,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="136,244,201,271"/>
+<area shape="rect" id="node4" title=" " alt="" coords="23,169,98,196"/>
+<area shape="rect" id="node8" title=" " alt="" coords="255,169,340,196"/>
+<area shape="rect" id="node11" title=" " alt="" coords="444,169,506,196"/>
+</map>

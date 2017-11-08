@@ -1,0 +1,13 @@
+<map id="drivers/axi_core/axi_dmac/axi_dmac.c" name="drivers/axi_core/axi_dmac/axi_dmac.c">
+<area shape="rect" id="node1" title="Driver for the Analog Devices AXI&#45;DMAC core." alt="" coords="158,5,293,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,69,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="93,95,155,121"/>
+<area shape="rect" id="node4" href="$axi__io_8h.html" title="Header file of AXI IO." alt="" coords="135,169,201,196"/>
+<area shape="rect" id="node6" href="$error_8h.html" title="Error codes definition." alt="" coords="229,95,288,121"/>
+<area shape="rect" id="node8" href="$delay_8h.html" title="Header file of Delay functions." alt="" coords="313,169,377,196"/>
+<area shape="rect" id="node9" href="$axi__dmac_8h.html" title="Driver for the Analog Devices AXI&#45;DMAC core." alt="" coords="370,95,459,121"/>
+<area shape="rect" id="node5" title=" " alt="" coords="331,244,397,271"/>
+<area shape="rect" id="node7" title=" " alt="" coords="226,169,289,196"/>
+<area shape="rect" id="node10" href="$util_8h.html" title="Implementation of utility functions." alt="" coords="452,169,503,196"/>
+<area shape="rect" id="node11" title=" " alt="" coords="440,244,515,271"/>
+</map>

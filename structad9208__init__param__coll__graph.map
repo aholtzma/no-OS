@@ -1,0 +1,9 @@
+<map id="ad9208_init_param" name="ad9208_init_param">
+<area shape="rect" id="node1" title=" " alt="" coords="177,184,307,211"/>
+<area shape="rect" id="node2" href="$structad9208__ddc.html" title=" " alt="" coords="5,95,97,121"/>
+<area shape="rect" id="node3" href="$structgpio__init__param.html" title="Structure holding the parameters for GPIO initialization." alt="" coords="121,95,235,121"/>
+<area shape="rect" id="node4" href="$structgpio__platform__ops.html" title="Structure holding gpio function pointers that point to the platform specific function." alt="" coords="114,5,242,32"/>
+<area shape="rect" id="node5" href="$structjesd__param__t.html" title=" " alt="" coords="259,95,359,121"/>
+<area shape="rect" id="node6" href="$structspi__init__param.html" title="Structure holding the parameters for SPI initialization." alt="" coords="383,95,490,121"/>
+<area shape="rect" id="node7" href="$structspi__platform__ops.html" title="Structure holding SPI function pointers that point to the platform specific function." alt="" coords="376,5,497,32"/>
+</map>

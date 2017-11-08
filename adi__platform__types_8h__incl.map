@@ -1,0 +1,8 @@
+<map id="projects/adrv9001/src/hal/adi_platform_types.h" name="projects/adrv9001/src/hal/adi_platform_types.h">
+<area shape="rect" id="node1" title=" " alt="" coords="92,5,260,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,95,67,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="231,169,297,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="141,95,211,121"/>
+<area shape="rect" id="node5" href="$gpio_8h.html" title="Header file of GPIO Interface." alt="" coords="235,95,293,121"/>
+<area shape="rect" id="node6" href="$spi_8h.html" title="Header file of SPI Interface." alt="" coords="317,95,368,121"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="adf4350_dev" name="adf4350_dev">
+<area shape="rect" id="node1" title=" " alt="" coords="85,184,181,211"/>
+<area shape="rect" id="node2" href="$structadf4350__platform__data.html" title=" " alt="" coords="5,95,160,121"/>
+<area shape="rect" id="node3" href="$structspi__desc.html" title="Structure holding SPI descriptor." alt="" coords="184,95,259,121"/>
+<area shape="rect" id="node4" href="$structspi__platform__ops.html" title="Structure holding SPI function pointers that point to the platform specific function." alt="" coords="161,5,282,32"/>
+</map>

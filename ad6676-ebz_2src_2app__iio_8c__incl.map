@@ -1,0 +1,21 @@
+<map id="projects/ad6676&#45;ebz/src/app_iio.c" name="projects/ad6676&#45;ebz/src/app_iio.c">
+<area shape="rect" id="node1" title="Application IIO setup." alt="" coords="462,5,601,47"/>
+<area shape="rect" id="node2" href="$error_8h.html" title="Error codes definition." alt="" coords="201,95,259,121"/>
+<area shape="rect" id="node4" href="$uart_8h.html" title="Header file of UART interface." alt="" coords="487,319,541,345"/>
+<area shape="rect" id="node6" title=" " alt="" coords="527,95,618,121"/>
+<area shape="rect" id="node7" title=" " alt="" coords="643,95,689,121"/>
+<area shape="rect" id="node8" href="$ad6676-ebz_2src_2parameters_8h.html" title="Platform dependent parameters." alt="" coords="714,95,813,121"/>
+<area shape="rect" id="node11" href="$ad6676-ebz_2src_2app__iio_8h.html" title="Application IIO setup." alt="" coords="327,95,402,121"/>
+<area shape="rect" id="node18" href="$irq_8h.html" title="Header file of IRQ interface." alt="" coords="416,319,463,345"/>
+<area shape="rect" id="node19" title=" " alt="" coords="837,95,919,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="155,169,217,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="336,393,401,420"/>
+<area shape="rect" id="node9" href="$ad6676-ebz_2src_2app__config_8h.html" title="Config file for AD6676 project." alt="" coords="778,169,874,196"/>
+<area shape="rect" id="node10" title=" " alt="" coords="648,169,753,196"/>
+<area shape="rect" id="node12" href="$iio__axi__adc_8h.html" title="Header file of iio_axi_adc." alt="" coords="242,169,341,196"/>
+<area shape="rect" id="node13" title=" " alt="" coords="141,244,226,271"/>
+<area shape="rect" id="node14" href="$axi__adc__core_8h.html" title="Driver for the Analog Devices AXI&#45;ADC&#45;CORE module." alt="" coords="5,244,116,271"/>
+<area shape="rect" id="node17" href="$axi__dmac_8h.html" title="Driver for the Analog Devices AXI&#45;DMAC core." alt="" coords="251,244,340,271"/>
+<area shape="rect" id="node15" href="$util_8h.html" title="Implementation of utility functions." alt="" coords="239,319,290,345"/>
+<area shape="rect" id="node16" title=" " alt="" coords="227,393,302,420"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="ad7799_write" name="ad7799_write">
+<area shape="rect" id="node1" title="Write device register." alt="" coords="609,107,708,133"/>
+<area shape="rect" id="node2" href="$ad7799_8h.html#a110505fddc9c9ab83e769c67869bddc0" title="Select the ADC channel." alt="" coords="420,5,561,32"/>
+<area shape="rect" id="node5" href="$ad7799_8h.html#a76aff4822d5897bf3755d2484ce1736f" title="Set the ADC gain." alt="" coords="431,107,551,133"/>
+<area shape="rect" id="node7" href="$ad7799_8h.html#a424e4b340124d033e7590e04ddff1f42" title="Set the device mode." alt="" coords="427,56,555,83"/>
+<area shape="rect" id="node8" href="$ad7799_8h.html#aae396916539b5fe342eb3d9404ebf85e" title="Set ADC polarity." alt="" coords="421,157,560,184"/>
+<area shape="rect" id="node9" href="$ad7799_8h.html#a88b03084d9542b44987004214efafd6d" title="Enable or disable the reference detect function." alt="" coords="426,208,555,235"/>
+<area shape="rect" id="node3" href="$ad7799_8h.html#a078b67608f7960dbe19be8d97cd2dea3" title="Read specific ADC channel." alt="" coords="226,31,367,57"/>
+<area shape="rect" id="node4" href="$iio__ad7799_8c.html#a16354015b948bf8583e3e4578fac6655" title="Read ADC Channel data." alt="" coords="5,31,173,57"/>
+<area shape="rect" id="node6" href="$iio__ad7799_8c.html#a2e9b283b97073e50c0de4e00d994f281" title="Write ADC Gain value." alt="" coords="221,107,372,133"/>
+</map>

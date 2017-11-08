@@ -1,0 +1,11 @@
+<map id="drivers/adc/ad9208/ad9208_api/ad9208_reg.h" name="drivers/adc/ad9208/ad9208_api/ad9208_reg.h">
+<area shape="rect" id="node1" title="AD9208 SPI Register Definition Header File." alt="" coords="572,5,747,47"/>
+<area shape="rect" id="node2" href="$ad9208_8h.html" title="Header file of AD9208 Driver." alt="" coords="84,102,216,143"/>
+<area shape="rect" id="node5" href="$ad9208__adc__api_8c.html" title="Contains AD9208 APIs for ADC, DDC, NCO configuration and control." alt="" coords="240,102,441,143"/>
+<area shape="rect" id="node6" href="$ad9208__api_8c.html" title="Contains AD9208 APIs for ADC Chip Level Configuration and Control." alt="" coords="466,102,639,143"/>
+<area shape="rect" id="node7" href="$ad9208__jesd__api_8c.html" title="Contains AD9208 APIs for ADC JESD Configuration and Control." alt="" coords="664,102,868,143"/>
+<area shape="rect" id="node8" href="$ad9208__reg_8c.html" title="Contains AD9208 APIs for ADC Register Configuration and Control." alt="" coords="892,102,1067,143"/>
+<area shape="rect" id="node9" href="$ad9208__signal__monitor__api_8c.html" title="Contains AD9208 APIs for Signal Monitoring Features." alt="" coords="1091,95,1270,151"/>
+<area shape="rect" id="node3" href="$ad9208_8c.html" title="Implementation of AD9208 Driver." alt="" coords="5,199,137,240"/>
+<area shape="rect" id="node4" href="$ad9208_2src_2main_8c.html" title="Implementation of Main Function." alt="" coords="162,199,298,240"/>
+</map>
