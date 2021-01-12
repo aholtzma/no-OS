@@ -42,10 +42,59 @@
 /******************************************************************************/
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
+#include <stdint.h>
 #include "axi_io.h"
 #include "error.h"
 #include "delay.h"
 #include "axi_dmac.h"
+
+/***************************************************************************//**
+ * @brief dma_isr
+*******************************************************************************/
+void axi_dmac_isr(void *instance)
+{
+	struct axi_dmac *dmac = (struct axi_dmac *)instance;
+	uint32_t remaining_size, burst_size;
+	uint32_t reg_val;
+
+	/* Get interrupt sources and clear interrupts. */
+	axi_dmac_read(dmac, AXI_DMAC_REG_IRQ_PENDING, &reg_val);
+	axi_dmac_write(dmac, AXI_DMAC_REG_IRQ_PENDING, reg_val);
+
+	if ((reg_val & AXI_DMAC_IRQ_SOT) && (dmac->big_transfer.size != 0)) {
+		remaining_size = dmac->big_transfer.size -
+				 dmac->big_transfer.size_done;
+		burst_size = (remaining_size <= dmac->transfer_max_size) ?
+			     remaining_size : dmac->transfer_max_size;
+
+		dmac->big_transfer.size_done += burst_size;
+		dmac->big_transfer.address += burst_size;
+		switch (dmac->direction) {
+		case DMA_DEV_TO_MEM:
+			axi_dmac_write(dmac, AXI_DMAC_REG_DEST_ADDRESS,
+				       dmac->big_transfer.address);
+			axi_dmac_write(dmac, AXI_DMAC_REG_DEST_STRIDE, 0x0);
+			break;
+		case DMA_MEM_TO_DEV:
+			axi_dmac_write(dmac, AXI_DMAC_REG_SRC_ADDRESS,
+				       dmac->big_transfer.address);
+			axi_dmac_write(dmac, AXI_DMAC_REG_SRC_STRIDE, 0x0);
+			break;
+		default:
+			return; // Other directions are not supported yet
+		}
+		/* The current transfer was started and a new one is queued. */
+		axi_dmac_write(dmac, AXI_DMAC_REG_X_LENGTH,
+			       burst_size);
+		axi_dmac_write(dmac, AXI_DMAC_REG_Y_LENGTH, 0x0);
+
+		axi_dmac_write(dmac, AXI_DMAC_REG_START_TRANSFER, 0x1);
+	}
+	if (reg_val & AXI_DMAC_IRQ_EOT) {
+		dmac->transfer_done = true;
+	}
+}
 
 /***************************************************************************//**
  * @brief axi_dmac_read
@@ -79,6 +128,7 @@ int32_t axi_dmac_transfer(struct axi_dmac *dmac,
 {
 	uint32_t transfer_id;
 	uint32_t reg_val;
+	uint32_t timeout = 0;
 
 	if (size == 0)
 		return SUCCESS; /* nothing to do */
@@ -104,6 +154,33 @@ int32_t axi_dmac_transfer(struct axi_dmac *dmac,
 	default:
 		return FAILURE; // Other directions are not supported yet
 	}
+
+	if ((size - 1) > dmac->transfer_max_size) {
+		dmac->big_transfer.address = address;
+		dmac->big_transfer.size = size - 1;
+		dmac->big_transfer.size_done = dmac->transfer_max_size;
+
+		axi_dmac_write(dmac, AXI_DMAC_REG_X_LENGTH,
+			       dmac->transfer_max_size);
+		axi_dmac_write(dmac, AXI_DMAC_REG_Y_LENGTH, 0x0);
+
+		axi_dmac_write(dmac, AXI_DMAC_REG_FLAGS, dmac->flags);
+
+		axi_dmac_write(dmac, AXI_DMAC_REG_START_TRANSFER, 0x1);
+
+		while(!dmac->transfer_done) {
+			timeout++;
+			if (timeout == UINT32_MAX)
+				return FAILURE;
+		}
+
+		dmac->big_transfer.address = 0;
+		dmac->big_transfer.size = 0;
+		dmac->big_transfer.size_done = 0;
+
+		return SUCCESS;
+	}
+
 	axi_dmac_write(dmac, AXI_DMAC_REG_X_LENGTH, size - 1);
 	axi_dmac_write(dmac, AXI_DMAC_REG_Y_LENGTH, 0x0);
 
@@ -120,10 +197,7 @@ int32_t axi_dmac_transfer(struct axi_dmac *dmac,
 	} while(reg_val == 1);
 
 	/* Wait until the current transfer is completed. */
-	do {
-		axi_dmac_read(dmac, AXI_DMAC_REG_IRQ_PENDING, &reg_val);
-	} while(reg_val != (AXI_DMAC_IRQ_SOT | AXI_DMAC_IRQ_EOT));
-	axi_dmac_write(dmac, AXI_DMAC_REG_IRQ_PENDING, reg_val);
+	while(!dmac->transfer_done);
 
 	/* Wait until the transfer with the ID transfer_id is completed. */
 	do {
@@ -149,6 +223,13 @@ int32_t axi_dmac_init(struct axi_dmac **dmac_core,
 	dmac->base = init->base;
 	dmac->direction = init->direction;
 	dmac->flags = init->flags;
+	dmac->transfer_max_size = -1;
+	dmac->big_transfer.address = 0;
+	dmac->big_transfer.size = 0;
+	dmac->big_transfer.size_done = 0;
+
+	axi_dmac_write(dmac, AXI_DMAC_REG_X_LENGTH, dmac->transfer_max_size);
+	axi_dmac_read(dmac, AXI_DMAC_REG_X_LENGTH, &dmac->transfer_max_size);
 
 	*dmac_core = dmac;
 
