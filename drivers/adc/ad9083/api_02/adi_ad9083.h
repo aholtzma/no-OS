@@ -667,8 +667,7 @@ int32_t adi_ad9083_rx_adc_config_set(adi_ad9083_device_t *device, uint32_t vmax,
 int32_t adi_ad9083_rx_datapath_config_set(adi_ad9083_device_t *device,
                                           adi_ad9083_datapath_mode_e mode,
                                           uint8_t dec[4],
-                                          uint64_t nco_freq_hz[3],
-                                          uint8_t zero_stuffing_en);
+                                          uint64_t nco_freq_hz[3]);
 
 /**
  * @brief  Enable/disable Datapath
