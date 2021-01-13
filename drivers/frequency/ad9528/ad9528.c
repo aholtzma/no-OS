@@ -109,8 +109,8 @@ int32_t ad9528_spi_write(struct ad9528_dev *dev,
 
 	int32_t ret = 0;
 
-	buf[0] = (uint8_t) reg_addr >> 8;
-	buf[1] = (uint8_t) reg_addr & 0xFF;
+	buf[0] = reg_addr >> 8;
+	buf[1] = reg_addr & 0xFF;
 	buf[2] = (uint8_t) reg_data;
 	ret |= spi_write_and_read(dev->spi_desc,
 				  buf,
