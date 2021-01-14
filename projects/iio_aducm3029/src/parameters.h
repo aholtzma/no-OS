@@ -1,9 +1,9 @@
 /***************************************************************************//**
- *   @file   platform_init.c
- *   @brief  ADuCM3029 platform initialization source.
- *   @author Andrei Drimbarean (Andrei.Drimbarean@analog.com)
+ *   @file   iio_aducm3029/src/parameters.h
+ *   @brief  Parameters Definitions.
+ *   @author Mihail Chindris (mihail.chindris@analog.com)
 ********************************************************************************
- * Copyright 2020(c) Analog Devices, Inc.
+ * Copyright 2013(c) Analog Devices, Inc.
  *
  * All rights reserved.
  *
@@ -36,32 +36,18 @@
  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *******************************************************************************/
+#ifndef PARAMETERS_H
+#define PARAMETERS_H
 
-#include <sys/platform.h>
-#include "adi_initialize.h"
-#include <drivers/pwr/adi_pwr.h>
-#include "error.h"
+#include "iio_aducm3029.h"
+#include "irq_extra.h"
 
-/**
- * @brief Initialize the power controller and set the core and peripherals clock
- *        divider.
- * @return 0 in case of success or error code otherwise.
- */
-int32_t platform_init(void)
-{
-	int32_t ret;
+#define MAX_SIZE_BASE_ADDR		3000
+#define UART_DEVICE_ID			0
+#define INTC_DEVICE_ID			0
+#define UART_IRQ_ID			ADUCM_UART_INT_ID
+#define UART_BAUDRATE			115200
+#define DEFAULT_SAMPLES			400
+#define ADC_BUFF_SIZE			(ADUCM3029_ADC_NUM_CH * DEFAULT_SAMPLES)
 
-	ret = adi_pwr_Init();
-	if(ret != SUCCESS)
-		return FAILURE;
-	ret = adi_pwr_SetClockDivider(ADI_CLOCK_HCLK,1);
-	if(ret != SUCCESS)
-		return FAILURE;
-	ret = adi_pwr_SetClockDivider(ADI_CLOCK_PCLK,1);
-	if(ret != SUCCESS)
-		return ret;
-
-	adi_initComponents();
-
-	return SUCCESS;
-}
+#endif

@@ -1,7 +1,7 @@
 /***************************************************************************//**
- *   @file   platform_init.c
- *   @brief  ADuCM3029 platform initialization source.
- *   @author Andrei Drimbarean (Andrei.Drimbarean@analog.com)
+ *   @file   adc.h
+ *   @brief  Interface of adc.c
+ *   @author Mihail Chindris (mihail.chindris@analog.com)
 ********************************************************************************
  * Copyright 2020(c) Analog Devices, Inc.
  *
@@ -37,31 +37,37 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 *******************************************************************************/
 
-#include <sys/platform.h>
-#include "adi_initialize.h"
-#include <drivers/pwr/adi_pwr.h>
-#include "error.h"
+#ifndef ADUCM3029_ADC_H
+#define ADUCM3029_ADC_H
+
+#include <stdint.h>
+
+#define ADUCM3029_CH(x) (1 << x)
+
+struct adc_desc;
 
 /**
- * @brief Initialize the power controller and set the core and peripherals clock
- *        divider.
- * @return 0 in case of success or error code otherwise.
+ * @struct adc_init_param
+ * @brief This can be extended in the future, no utility for the moment.
  */
-int32_t platform_init(void)
-{
-	int32_t ret;
+struct adc_init_param {
+	/* To add options in the future */
+	uint32_t reserved;
+};
 
-	ret = adi_pwr_Init();
-	if(ret != SUCCESS)
-		return FAILURE;
-	ret = adi_pwr_SetClockDivider(ADI_CLOCK_HCLK,1);
-	if(ret != SUCCESS)
-		return FAILURE;
-	ret = adi_pwr_SetClockDivider(ADI_CLOCK_PCLK,1);
-	if(ret != SUCCESS)
-		return ret;
+/* Activate channels for reading */
+int32_t aducm3029_adc_update_active_channels(struct adc_desc *desc,
+		uint32_t mask);
 
-	adi_initComponents();
+/* Read adc channels */
+int32_t aducm3029_adc_read(struct adc_desc *desc, uint16_t *buff,
+			   uint32_t nb_samples);
 
-	return SUCCESS;
-}
+/* Initialize the ADC */
+int32_t aducm3029_adc_init(struct adc_desc **desc,
+			   struct adc_init_param *param);
+
+/* Free the resources allocated by adc_init(). */
+int32_t aducm3029_adc_remove(struct adc_desc *desc);
+
+#endif
