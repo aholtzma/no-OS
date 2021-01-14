@@ -165,7 +165,7 @@ AD9361_InitParam default_init_param = {
 	0,		//ensm_enable_txnrx_control_enable *** adi,ensm-enable-txnrx-control-enable
 	/* LO Control */
 	2400000000UL,	//rx_synthesizer_frequency_hz *** adi,rx-synthesizer-frequency-hz
-	2400000000UL,	//tx_synthesizer_frequency_hz *** adi,tx-synthesizer-frequency-hz
+	2300000000UL,	//tx_synthesizer_frequency_hz *** adi,tx-synthesizer-frequency-hz
 	1,				//tx_lo_powerdown_managed_enable *** adi,tx-lo-powerdown-managed-enable
 	/* Rate & BW Control */
 	{983040000, 245760000, 122880000, 61440000, 30720000, 30720000},// rx_path_clock_frequencies[6] *** adi,rx-path-clock-frequencies
@@ -179,7 +179,7 @@ AD9361_InitParam default_init_param = {
 	10000,	//tx_attenuation_mdB *** adi,tx-attenuation-mdB
 	0,		//update_tx_gain_in_alert_enable *** adi,update-tx-gain-in-alert-enable
 	/* Reference Clock Control */
-	0,		//xo_disable_use_ext_refclk_enable *** adi,xo-disable-use-ext-refclk-enable
+	1,		//xo_disable_use_ext_refclk_enable *** adi,xo-disable-use-ext-refclk-enable
 	{8, 5920},	//dcxo_coarse_and_fine_tune[2] *** adi,dcxo-coarse-and-fine-tune
 	CLKOUT_DISABLE,	//clk_output_mode_select *** adi,clk-output-mode-select
 	/* Gain Control */
@@ -320,15 +320,11 @@ AD9361_InitParam default_init_param = {
 	4,		//rx_data_delay *** adi,rx-data-delay
 	7,		//tx_fb_clock_delay *** adi,tx-fb-clock-delay
 	0,		//tx_data_delay *** adi,tx-data-delay
-#ifdef ALTERA_PLATFORM
-	300,	//lvds_bias_mV *** adi,lvds-bias-mV
-#else
 	150,	//lvds_bias_mV *** adi,lvds-bias-mV
-#endif
 	1,		//lvds_rx_onchip_termination_enable *** adi,lvds-rx-onchip-termination-enable
 	0,		//rx1rx2_phase_inversion_en *** adi,rx1-rx2-phase-inversion-enable
-	0xFF,	//lvds_invert1_control *** adi,lvds-invert1-control
-	0x0F,	//lvds_invert2_control *** adi,lvds-invert2-control
+	0xff,	//lvds_invert1_control *** adi,lvds-invert1-control
+	0x0f,	//lvds_invert2_control *** adi,lvds-invert2-control
 	/* GPO Control */
 	0,		//gpo_manual_mode_enable *** adi,gpo-manual-mode-enable
 	0,		//gpo_manual_mode_enable_mask *** adi,gpo-manual-mode-enable-mask
@@ -496,82 +492,38 @@ struct ad9361_rf_phy *ad9361_phy_b;
 int main(void)
 {
 	int32_t status;
-#ifdef XILINX_PLATFORM
-	Xil_ICacheEnable();
-	Xil_DCacheEnable();
-	default_init_param.spi_param.extra = &xil_spi_param;
-	default_init_param.spi_param.platform_ops = &xil_platform_ops;
-#endif
-
-#ifdef ALTERA_PLATFORM
-	default_init_param.spi_param.platform_ops = &altera_platform_ops;
-
-	if (altera_bridge_init()) {
-		printf("Altera Bridge Init Error!\n");
-		return -1;
-	}
-#endif
 
 	// NOTE: The user has to choose the GPIO numbers according to desired
 	// carrier board.
 	default_init_param.gpio_resetb.number = GPIO_RESET_PIN;
-
-#ifdef FMCOMMS5
-	default_init_param.gpio_sync.number = GPIO_SYNC_PIN;
-	default_init_param.gpio_cal_sw1.number = GPIO_CAL_SW1_PIN;
-	default_init_param.gpio_cal_sw2.number = GPIO_CAL_SW2_PIN;
-	default_init_param.rx1rx2_phase_inversion_en = 1;
-#else
 	default_init_param.gpio_sync.number = -1;
-	default_init_param.gpio_cal_sw1.number = -1;
-	default_init_param.gpio_cal_sw2.number = -1;
-#endif
+	default_init_param.gpio_cal_sw1.number = -1 ;
+	default_init_param.gpio_cal_sw2.number = -1 ;
+	default_init_param.rx1rx2_phase_inversion_en = 0;
+
+
+	default_init_param.frequency_division_duplex_mode_enable = 1;
+	default_init_param.frequency_division_duplex_independent_mode_enable  = 0;
+	default_init_param.lvds_rx_onchip_termination_enable= 1;
+	default_init_param.lvds_mode_enable = 1;
+	default_init_param.lvds_bias_mV = 150;
+	default_init_param.rx_data_delay  = 0;
+	default_init_param.rx_data_delay  = 0;
+	default_init_param.tx_fb_clock_delay = 0;
+	default_init_param.tx_data_delay = 0;
 
 	if (AD9364_DEVICE)
 		default_init_param.dev_sel = ID_AD9364;
 	if (AD9363A_DEVICE)
 		default_init_param.dev_sel = ID_AD9363A;
 
-#if defined FMCOMMS5 || defined ADI_RF_SOM || defined ADI_RF_SOM_CMOS
 	default_init_param.xo_disable_use_ext_refclk_enable = 1;
-#endif
-
-#ifdef ADI_RF_SOM_CMOS
-	default_init_param.swap_ports_enable = 1;
-	default_init_param.lvds_mode_enable = 0;
-	default_init_param.lvds_rx_onchip_termination_enable = 0;
-	default_init_param.full_port_enable = 1;
-	default_init_param.digital_interface_tune_fir_disable = 1;
-#endif
 
 	ad9361_init(&ad9361_phy, &default_init_param);
 
 	ad9361_set_tx_fir_config(ad9361_phy, tx_fir_config);
 	ad9361_set_rx_fir_config(ad9361_phy, rx_fir_config);
 
-#ifdef FMCOMMS5
-#ifdef LINUX_PLATFORM
-	gpio_init(default_init_param.gpio_sync);
-#endif
-	default_init_param.id_no = SPI_CS_2;
-	default_init_param.gpio_resetb.number = GPIO_RESET_PIN_2;
-#ifdef LINUX_PLATFORM
-	gpio_init(default_init_param.gpio_resetb);
-#endif
-	default_init_param.gpio_sync.number = -1;
-	default_init_param.gpio_cal_sw1.number = -1;
-	default_init_param.gpio_cal_sw2.number = -1;
-	default_init_param.rx_synthesizer_frequency_hz = 2300000000UL;
-	default_init_param.tx_synthesizer_frequency_hz = 2300000000UL;
-
-	rx_adc_init.base = AD9361_RX_1_BASEADDR;
-	tx_dac_init.base = AD9361_TX_1_BASEADDR;
-
-	ad9361_init(&ad9361_phy_b, &default_init_param);
-
-	ad9361_set_tx_fir_config(ad9361_phy_b, tx_fir_config);
-	ad9361_set_rx_fir_config(ad9361_phy_b, rx_fir_config);
-#endif
 	status = axi_dmac_init(&tx_dmac, &tx_dmac_init);
 	if (status < 0) {
 		printf("axi_dmac_init tx init error: %"PRIi32"\n", status);
@@ -582,30 +534,13 @@ int main(void)
 		printf("axi_dmac_init rx init error: %"PRIi32"\n", status);
 		return status;
 	}
-#ifndef AXI_ADC_NOT_PRESENT
-#if defined XILINX_PLATFORM || defined LINUX_PLATFORM || defined ALTERA_PLATFORM
-#ifdef DAC_DMA_EXAMPLE
-#ifdef FMCOMMS5
-	axi_dac_init(&ad9361_phy->tx_dac, &tx_dac_init);
-	axi_dac_set_datasel(ad9361_phy_b->tx_dac, -1, AXI_DAC_DATA_SEL_DMA);
-#endif
-	axi_dac_init(&ad9361_phy->tx_dac, &tx_dac_init);
+
+#if 0
+	axi_dac_init(&ad9361_phy->tx_dac, ad9361_phy->tx_dac_init);
 	axi_dac_set_datasel(ad9361_phy->tx_dac, -1, AXI_DAC_DATA_SEL_DMA);
 	axi_dac_set_sine_lut(ad9361_phy->tx_dac, DAC_DDR_BASEADDR);
-#else
-#ifdef FMCOMMS5
-	axi_dac_init(&ad9361_phy_b->tx_dac, ad9361_phy_b->tx_dac_init);
-	axi_dac_set_datasel(ad9361_phy_b->tx_dac, -1, AXI_DAC_DATA_SEL_DDS);
-#endif
-	axi_dac_init(&ad9361_phy->tx_dac, &tx_dac_init);
-	axi_dac_set_datasel(ad9361_phy->tx_dac, -1, AXI_DAC_DATA_SEL_DDS);
-#endif
-#endif
 #endif
 
-#ifdef FMCOMMS5
-	ad9361_do_mcs(ad9361_phy, ad9361_phy_b);
-#endif
 
 #ifndef AXI_ADC_NOT_PRESENT
 #if (defined XILINX_PLATFORM || defined ALTERA_PLATFORM) && \
@@ -626,173 +561,6 @@ int main(void)
 #endif
 #endif
 #endif
-
-#ifdef IIO_SUPPORT
-
-	/**
-	 * iio application configurations.
-	 */
-	struct iio_init_param iio_init_par;
-
-	/**
-	 * iio axi adc configurations.
-	 */
-	struct iio_axi_adc_init_param iio_axi_adc_init_par;
-
-	/**
-	 * iio axi dac configurations.
-	 */
-	struct iio_axi_dac_init_param iio_axi_dac_init_par;
-
-	/**
-	 * iio ad9361 configurations.
-	 */
-	struct iio_ad9361_init_param iio_ad9361_init_param;
-
-
-	/**
-	 * iio application instance descriptor.
-	 */
-	struct iio_desc *iio_app_desc;
-
-	/**
-	 * iio instance descriptor.
-	 */
-	struct iio_axi_adc_desc *iio_axi_adc_desc;
-
-	/**
-	 * iio instance descriptor.
-	 */
-	struct iio_axi_dac_desc *iio_axi_dac_desc;
-
-	/**
-	 * iio ad9361 instance descriptor.
-	 */
-	struct iio_ad9361_desc *iio_ad9361_desc;
-
-	/**
-	 * Xilinx platform dependent initialization for IRQ.
-	 */
-	struct xil_irq_init_param xil_irq_init_par = {
-		.type = IRQ_PS,
-	};
-
-	/**
-	 * IRQ initial configuration.
-	 */
-	struct irq_init_param irq_init_param = {
-		.irq_ctrl_id = INTC_DEVICE_ID,
-		.extra = &xil_irq_init_par,
-	};
-
-	/**
-	 * iio devices corresponding to every device.
-	 */
-	struct iio_device *adc_dev_desc, *dac_dev_desc, *ad9361_dev_desc;
-
-	/**
-	 * IRQ instance.
-	 */
-	struct irq_ctrl_desc *irq_desc;
-
-	/**
-	 * Xilinx platform dependent initialization for UART.
-	 */
-	struct xil_uart_init_param xil_uart_init_par;
-
-	/**
-	 * Initialization for UART.
-	 */
-	struct uart_init_param uart_init_par;
-
-	status = irq_ctrl_init(&irq_desc, &irq_init_param);
-	if(status < 0)
-		return status;
-
-	xil_uart_init_par = (struct xil_uart_init_param) {
-		.type = UART_PS,
-		.irq_id = UART_IRQ_ID,
-		.irq_desc = irq_desc,
-	};
-
-	uart_init_par = (struct uart_init_param) {
-		.baud_rate = 921600,
-		.device_id = UART_DEVICE_ID,
-		.extra = &xil_uart_init_par,
-	};
-
-	status = irq_global_enable(irq_desc);
-	if (status < 0)
-		return status;
-
-	status = axi_dmac_init(&tx_dmac, &tx_dmac_init);
-	if(status < 0)
-		return status;
-
-	iio_init_par.phy_type = USE_UART;
-	iio_init_par.uart_init_param = &uart_init_par;
-	status = iio_init(&iio_app_desc, &iio_init_par);
-	if(status < 0)
-		return status;
-
-	iio_axi_adc_init_par = (struct iio_axi_adc_init_param) {
-		.rx_adc = ad9361_phy->rx_adc,
-		.rx_dmac = rx_dmac,
-		.dcache_invalidate_range = (void (*)(uint32_t,
-						     uint32_t))Xil_DCacheInvalidateRange
-	};
-
-	status = iio_axi_adc_init(&iio_axi_adc_desc, &iio_axi_adc_init_par);
-	if(status < 0)
-		return status;
-	iio_axi_adc_get_dev_descriptor(iio_axi_adc_desc, &adc_dev_desc);
-	struct iio_data_buffer read_buff = {
-		.buff = (void *)ADC_DDR_BASEADDR,
-		.size = 0xFFFFFFFF,
-	};
-	status = iio_register(iio_app_desc, adc_dev_desc, "cf-ad9361-lpc",
-			      iio_axi_adc_desc, &read_buff, NULL);
-	if (status < 0)
-		return status;
-
-	iio_axi_dac_init_par = (struct iio_axi_dac_init_param) {
-		.tx_dac = ad9361_phy->tx_dac,
-		.tx_dmac = tx_dmac,
-		.dcache_flush_range = (void (*)(uint32_t, uint32_t))Xil_DCacheFlushRange,
-	};
-
-	status = iio_axi_dac_init(&iio_axi_dac_desc, &iio_axi_dac_init_par);
-	if (status < 0)
-		return status;
-	iio_axi_dac_get_dev_descriptor(iio_axi_dac_desc, &dac_dev_desc);
-
-	struct iio_data_buffer write_buff = {
-		.buff = (void *)DAC_DDR_BASEADDR,
-		.size = 0xFFFFFFFF,
-	};
-	status = iio_register(iio_app_desc, dac_dev_desc, "cf-ad9361-dds-core-lpc",
-			      iio_axi_dac_desc, NULL, &write_buff);
-	if (status < 0)
-		return status;
-
-	iio_ad9361_init_param = (struct iio_ad9361_init_param) {
-		.ad9361_phy = ad9361_phy,
-	};
-
-	status = iio_ad9361_init(&iio_ad9361_desc, &iio_ad9361_init_param);
-	if (status < 0)
-		return status;
-	iio_ad9361_get_dev_descriptor(iio_ad9361_desc, &ad9361_dev_desc);
-	status = iio_register(iio_app_desc, ad9361_dev_desc, "ad9361-phy", ad9361_phy,
-			      NULL, NULL);
-	if (status < 0)
-		return status;
-
-	do {
-		status = iio_step(iio_app_desc);
-	} while (true);
-
-#endif // IIO_SUPPORT
 
 	printf("Done.\n");
 

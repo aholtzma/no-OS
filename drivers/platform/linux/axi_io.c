@@ -70,6 +70,7 @@ static int32_t uio_read_write(uint32_t base, uint32_t offset, uint32_t *read,
 	int32_t status = SUCCESS;
 	void *uio_addr;
 
+
 	sprintf(buf, "/dev/uio%"PRIu32"", base);
 
 	uio_fd = open(buf, O_RDWR);
@@ -94,6 +95,13 @@ static int32_t uio_read_write(uint32_t base, uint32_t offset, uint32_t *read,
 		*read = *(uint32_t *)((uintptr_t)uio_addr + offset);
 	if (write)
 		*(uint32_t *)((uintptr_t)uio_addr + offset) = *write;
+
+#if 0	
+	if (read)
+		printf("[axi io] read base:%08x offset:%08x data:%08x\n", base, offset, *read);
+	else if (write)
+		printf("[axi io] write base:%08x offset:%08x data:%08x\n", base, offset, *write);
+#endif
 
 	ret = munmap(uio_addr, offset + sizeof(*read));
 	if (ret < 0) {

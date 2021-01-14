@@ -429,6 +429,8 @@ static int32_t ad9361_dig_tune_rx(struct ad9361_rf_phy *phy, uint32_t max_freq,
 	struct axi_adc *rx_adc = phy->rx_adc;
 	int32_t ret;
 
+	flags |= BE_MOREVERBOSE;
+
 	ad9361_bist_loopback(phy, 0);
 	ad9361_bist_prbs(phy, BIST_INJ_RX);
 
@@ -452,6 +454,7 @@ static int32_t ad9361_dig_tune_rx(struct ad9361_rf_phy *phy, uint32_t max_freq,
 static int32_t ad9361_dig_tune_tx(struct ad9361_rf_phy *phy, uint32_t max_freq,
 			      enum dig_tune_flags flags)
 {
+	flags |= BE_MOREVERBOSE;
 	struct axiadc_converter *conv = phy->adc_conv;
 	struct axi_adc *rx_adc = phy->rx_adc;
 	uint32_t saved_dsel[4], saved_chan_ctrl6[4], saved_chan_ctrl0[4];
